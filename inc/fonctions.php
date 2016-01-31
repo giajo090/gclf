@@ -41,8 +41,9 @@ function saveFileContent($filename, $content) {
 
 		return true;
 	}
-
-	return false;
+	else {
+		return false;
+	}
 }
 function appendContentToFile($filename, $content) {
 	$fp = fopen($filename, 'a');
@@ -52,6 +53,7 @@ function appendContentToFile($filename, $content) {
 
 		return true;
 	}
-
-	return false;
+	else {
+		return false;
+	}
 }
