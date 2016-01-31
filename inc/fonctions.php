@@ -33,3 +33,25 @@ function loadFileContent($filename) {
 	}
 	return false;
 }
+function saveFileContent($filename, $content) {
+	$fp = fopen($filename, 'w');
+	if ($fp) {
+		fputs($fp, $content);
+		fclose($fp);
+
+		return true;
+	}
+
+	return false;
+}
+function appendContentToFile($filename, $content) {
+	$fp = fopen($filename, 'a');
+	if ($fp) {
+		fputs($fp, $content);
+		fclose($fp);
+
+		return true;
+	}
+
+	return false;
+}
